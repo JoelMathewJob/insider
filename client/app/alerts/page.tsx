@@ -13,26 +13,23 @@ export default function AlertsPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr mb-4">
         <div className="flex">
           <AlertTrends />
-
+    
         </div>
         <div className="flex">
           <AnomalyDetection />
-
-
-
         </div>
 
-       
+
         <div className="flex">
-        <RiskScoreDistribution />
+          <RiskScoreDistribution />
         </div>
       </div>
       <div >
         <AlertsSection />
-       
 
 
-        </div>
+
+      </div>
     </div>
   )
 }

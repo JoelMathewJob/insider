@@ -346,9 +346,8 @@ export function UserProfilesOverview() {
                 {users.map((user) => (
                   <div
                     key={user.id}
-                    className={`cursor-pointer hover:bg-gray-600 p-3 rounded-lg transition ${
-                      selectedUser?.id === user.id ? "bg-gray-700" : ""
-                    }`}
+                    className={`cursor-pointer hover:bg-gray-600 p-3 rounded-lg transition ${selectedUser?.id === user.id ? "bg-gray-700" : ""
+                      }`}
                     onClick={() => setSelectedUser(user)}
                   >
                     <div className="flex items-center space-x-3">
@@ -376,69 +375,95 @@ export function UserProfilesOverview() {
         <div className="flex-1">
           {selectedUser ? (
             <Card className="h-[calc(100vh-60px)]">
-              {/* <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-2xl font-bold">{selectedUser.name}</CardTitle>
-                <button
-                  onClick={() => setSelectedUser(null)}
-                  className="p-1 hover:bg-gray-100 rounded-full transition-colors"
-                  aria-label="Close"
-                >
-                  <X className="h-5 w-5 text-gray-500" />
-                </button>
-              </CardHeader> */}
+              <CardHeader className="pb-3">
+                <div className="relative">
+                  {/* Close button - top right */}
+                  <button
+                    onClick={() => setSelectedUser(null)}
+                    className="absolute right-0 top-0 p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    aria-label="Close"
+                  >
+                    <X className="h-5 w-5 text-gray-500" />
+                  </button>
 
-              <Tabs defaultValue="profile" className="w-full">
-                <div className="px-6">
-                  <TabsList className="grid w-full grid-cols-2 mb-6">
-                    <TabsTrigger value="profile">Profile</TabsTrigger>
-                    <TabsTrigger value="logs">Logs</TabsTrigger>
-                  </TabsList>
+                  <div className="flex justify-between items-start pr-12">
+                    {/* User info - left side */}
+                    <div className="flex items-start space-x-4">
+                      <Avatar className="h-16 w-16">
+                        <AvatarFallback className="text-xl bg-gray-100 text-white">
+                          {selectedUser.name
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")}
+                        </AvatarFallback>
+                      </Avatar>
+
+                      <div className="space-y-1">
+                        <h3 className="text-xl font-semibold text-white">{selectedUser.name}</h3>
+                        <div className="space-y-0.5">
+                          <p className="text-sm text-gray-400">
+                            <span className="font-medium">Email:</span> {selectedUser.email}
+                          </p>
+                          <p className="text-sm text-gray-400">
+                            <span className="font-medium">Age:</span> {selectedUser.age}
+                          </p>
+                          <p className="text-sm text-gray-400">
+                            <span className="font-medium">Location:</span> {selectedUser.location}
+                          </p>
+                          <p className={`text-sm font-medium mt-1 ${getRiskColor(selectedUser.riskScore)}`}>
+                            Risk Score: {selectedUser.riskScore}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Action buttons - right side */}
+                    <div className="flex space-x-3">
+                      <button
+                        onClick={handleFlag}
+                        className="bg-amber-500 text-white px-4 py-2 rounded-lg hover:bg-amber-600 transition-colors font-medium text-sm"
+                      >
+                        Flag User
+                      </button>
+                      <button
+                        onClick={handleBlock}
+                        className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors font-medium text-sm"
+                      >
+                        Block User
+                      </button>
+                    </div>
+                  </div>
+                  <div className="space-y-6 px-4">
+                    {alertMessage && (
+                      <div className="p-3 bg-green-100 text-green-800 rounded-lg">
+                        {alertMessage}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
-                <TabsContent value="profile" className="mt-0">
-                  <ScrollArea className="h-[calc(100vh-140px)]">
-                    <CardContent>
-                      <div className="space-y-6">
-                        <div className="flex items-center space-x-4">
-                          <Avatar className="h-20 w-20">
-                            <AvatarFallback className="text-2xl">
-                              {selectedUser.name
-                                .split(" ")
-                                .map((n) => n[0])
-                                .join("")}
-                            </AvatarFallback>
-                          </Avatar>
-                          <div>
-                            <h3 className="text-xl font-semibold">{selectedUser.name}</h3>
-                            <p className="text-sm text-gray-500">Email: {selectedUser.email}</p>
-                            <p className="text-sm text-gray-500">Age: {selectedUser.age}</p>
-                            <p className="text-sm text-gray-500">Location: {selectedUser.location}</p>
-                            <p className={`text-sm font-medium ${getRiskColor(selectedUser.riskScore)}`}>
-                              Risk Score: {selectedUser.riskScore}
-                            </p>
-                          </div>
-                        </div>
+                {/* Tabs */}
+                <div className="mt-6">
+                  <Tabs defaultValue="profile" className="w-full">
+                    <TabsList className="grid w-[200px] grid-cols-2 bg-gray-100 p-1 rounded-lg ">
+                      <TabsTrigger
+                        value="profile"
+                        className="rounded-md data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm"
+                      >
+                        Profile
+                      </TabsTrigger>
+                      <TabsTrigger
+                        value="logs"
+                        className="rounded-md data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm"
+                      >
+                        Logs
+                      </TabsTrigger>
+                    </TabsList>
 
-                        <div className="flex space-x-4">
-                          <button
-                            onClick={handleFlag}
-                            className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition"
-                          >
-                            Flag
-                          </button>
-                          <button
-                            onClick={handleBlock}
-                            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
-                          >
-                            Block
-                          </button>
-                        </div>
-
-                        {alertMessage && (
-                          <div className="p-3 bg-green-100 text-green-800 rounded-lg">{alertMessage}</div>
-                        )}
-
-                        <div className="space-y-6">
+                    <TabsContent value="profile" className="mt-6">
+                      <ScrollArea className="h-[calc(100vh-250px)]">
+                        <div className="space-y-6 px-4">
+                          
                           <div className="bg-gray-50 p-4 rounded-lg">
                             <h3 className="font-medium flex items-center gap-2 mb-3 text-gray-700">
                               <Clock className="h-5 w-5 text-gray-500" />
@@ -448,7 +473,7 @@ export function UserProfilesOverview() {
                               {selectedUser.recentActivity.map((activity, index) => (
                                 <div
                                   key={index}
-                                  className="flex items-center justify-between border-b border-gray-200 pb-2"
+                                  className="flex items-center justify-between border-b border-gray-200 pb-2 last:border-0"
                                 >
                                   <span>{activity}</span>
                                 </div>
@@ -456,7 +481,7 @@ export function UserProfilesOverview() {
                             </div>
                           </div>
 
-                          <div className="bg-white p-4 rounded-lg shadow-sm">
+                          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
                             <h3 className="font-medium flex items-center gap-2 mb-3 text-gray-700">
                               <Shield className="h-5 w-5 text-gray-500" />
                               Admin Comments
@@ -468,7 +493,9 @@ export function UserProfilesOverview() {
                                     <FileText className="h-5 w-5 text-gray-400 mt-1" />
                                     <div>
                                       <p className="text-gray-700">{comment}</p>
-                                      <p className="text-sm text-gray-500 mt-1">Added by Admin on 2024-02-13</p>
+                                      <p className="text-sm text-gray-500 mt-1">
+                                        Added by Admin on 2024-02-13
+                                      </p>
                                     </div>
                                   </div>
                                 </div>
@@ -476,17 +503,17 @@ export function UserProfilesOverview() {
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </CardContent>
-                  </ScrollArea>
-                </TabsContent>
+                      </ScrollArea>
+                    </TabsContent>
 
-                <TabsContent value="logs" className="mt-0">
-                  <CardContent className="p-0">
-                    <LivePacketLogs />
-                  </CardContent>
-                </TabsContent>
-              </Tabs>
+                    <TabsContent value="logs" className="mt-6">
+                      <div className="">
+                        <LivePacketLogs />
+                      </div>
+                    </TabsContent>
+                  </Tabs>
+                </div>
+              </CardHeader>
             </Card>
           ) : (
             <div className="flex items-center justify-center h-[calc(100vh-120px)]">
