@@ -1,0 +1,83 @@
+[
+    {
+      "id": "INS-201",
+      "user": "Amit Sharma",
+      "action": "Accessed sensitive financial records",
+      "severity": "High",
+      "time": "5 minutes ago",
+      "status": "Open"
+    },
+    {
+      "id": "INS-202",
+      "user": "Priya Verma",
+      "action": "Attempted to disable firewall settings",
+      "severity": "Critical",
+      "time": "30 minutes ago",
+      "status": "Investigating"
+    },
+    {
+      "id": "INS-203",
+      "user": "Rajesh Kumar",
+      "action": "Multiple failed login attempts",
+      "severity": "Medium",
+      "time": "1 hour ago",
+      "status": "Open"
+    },
+    {
+      "id": "INS-204",
+      "user": "Sneha Iyer",
+      "action": "Downloaded bulk customer data",
+      "severity": "Critical",
+      "time": "3 hours ago",
+      "status": "Resolved"
+    },
+    {
+      "id": "INS-205",
+      "user": "Vikram Singh",
+      "action": "Used unauthorized VPN to access network",
+      "severity": "High",
+      "time": "5 hours ago",
+      "status": "Investigating"
+    },
+    {
+      "id": "INS-206",
+      "user": "Anjali Desai",
+      "action": "Sent confidential data to external email",
+      "severity": "High",
+      "time": "10 hours ago",
+      "status": "Open"
+    },
+    {
+      "id": "INS-207",
+      "user": "Kunal Joshi",
+      "action": "Tried to access admin panel without permission",
+      "severity": "Medium",
+      "time": "1 day ago",
+      "status": "Investigating"
+    },
+    {
+      "id": "INS-208",
+      "user": "Pooja Mehta",
+      "action": "Inserted an unknown USB device",
+      "severity": "Low",
+      "time": "2 days ago",
+      "status": "Resolved"
+    },
+    {
+      "id": "INS-209",
+      "user": "Rahul Nair",
+      "action": "Attempted to modify security policies",
+      "severity": "High",
+      "time": "3 days ago",
+      "status": "Open"
+    },
+    {
+      "id": "INS-210",
+      "user": "Neha Patil",
+      "action": "Unusual file encryption detected",
+      "severity": "Medium",
+      "time": "4 days ago",
+      "status": "Investigating"
+    }
+  ]
+  
