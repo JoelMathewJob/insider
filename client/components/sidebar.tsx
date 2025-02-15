@@ -25,7 +25,7 @@ export function Sidebar() {
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   return (
-    <div className="flex flex-col w-64 border-r border-black bg-white dark:bg-neutral-950 hidden md:block">
+    <div className="flex flex-col w-48 border-r border-black bg-white dark:bg-neutral-950 hidden md:block">
       <div className="p-4 border-b border-gray-500">
         <Button variant="outline" className="w-full justify-start" onClick={() => setIsFilterOpen(!isFilterOpen)}>
           <Filter className="mr-2 h-4 w-4" />

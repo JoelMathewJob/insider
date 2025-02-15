@@ -1,0 +1,123 @@
+[
+    {
+      "id": "USR001",
+      "name": "Joel Mathew",
+      "riskScore": 85,
+      "email": "joel@example.com",
+      "age": 30,
+      "location": "Mumbai",
+      "totalLogins": 245,
+      "filesAccessed": 876,
+      "recentActivity": ["Logged in", "Updated profile", "Changed password"],
+      "adminComments": ["High risk user", "Monitor activity closely"]
+    },
+    {
+      "id": "USR002",
+      "name": "Basil Mathai",
+      "riskScore": 78,
+      "email": "basil@example.com",
+      "age": 28,
+      "location": "Bangalore",
+      "totalLogins": 198,
+      "filesAccessed": 432,
+      "recentActivity": ["Logged in", "Accessed files"],
+      "adminComments": ["Needs monitoring", "Potentially suspicious activity"]
+    },
+    {
+      "id": "USR003",
+      "name": "Harsh Khairnar",
+      "riskScore": 89,
+      "email": "harsh@example.com",
+      "age": 35,
+      "location": "Pune",
+      "totalLogins": 312,
+      "filesAccessed": 1021,
+      "recentActivity": ["Changed password", "Logged in from new device"],
+      "adminComments": ["High risk user", "Investigate further"]
+    },
+    {
+      "id": "USR004",
+      "name": "Priya Sharma",
+      "riskScore": 92,
+      "email": "priya@example.com",
+      "age": 32,
+      "location": "Delhi",
+      "totalLogins": 150,
+      "filesAccessed": 678,
+      "recentActivity": ["Logged in", "Attempted unauthorized access"],
+      "adminComments": ["Critical risk, immediate action required"]
+    },
+    {
+      "id": "USR005",
+      "name": "Ravi Desai",
+      "riskScore": 65,
+      "email": "ravi@example.com",
+      "age": 29,
+      "location": "Hyderabad",
+      "totalLogins": 280,
+      "filesAccessed": 540,
+      "recentActivity": ["Logged in", "Changed email"],
+      "adminComments": ["Low risk, but keep an eye on changes"]
+    },
+    {
+      "id": "USR006",
+      "name": "Sneha Patil",
+      "riskScore": 82,
+      "email": "sneha@example.com",
+      "age": 27,
+      "location": "Chennai",
+      "totalLogins": 190,
+      "filesAccessed": 874,
+      "recentActivity": ["Logged in", "Accessed sensitive files"],
+      "adminComments": ["Monitor closely for any further actions"]
+    },
+    {
+      "id": "USR007",
+      "name": "Karan Mehta",
+      "riskScore": 88,
+      "email": "karan@example.com",
+      "age": 31,
+      "location": "Ahmedabad",
+      "totalLogins": 310,
+      "filesAccessed": 950,
+      "recentActivity": ["Logged in", "Deleted account"],
+      "adminComments": ["High risk, investigate deletion"]
+    },
+    {
+      "id": "USR008",
+      "name": "Neha Bhatia",
+      "riskScore": 75,
+      "email": "neha@example.com",
+      "age": 26,
+      "location": "Kolkata",
+      "totalLogins": 145,
+      "filesAccessed": 500,
+      "recentActivity": ["Logged in", "Updated profile picture"],
+      "adminComments": ["Regular user, no concerns"]
+    },
+    {
+      "id": "USR009",
+      "name": "Amitabh Joshi",
+      "riskScore": 94,
+      "email": "amitabh@example.com",
+      "age": 45,
+      "location": "Jaipur",
+      "totalLogins": 112,
+      "filesAccessed": 350,
+      "recentActivity": ["Logged in", "Accessed financial reports"],
+      "adminComments": ["Critical risk, sensitive access"]
+    },
+    {
+      "id": "USR010",
+      "name": "Ananya Iyer",
+      "riskScore": 80,
+      "email": "ananya@example.com",
+      "age": 34,
+      "location": "Surat",
+      "totalLogins": 205,
+      "filesAccessed": 720,
+      "recentActivity": ["Logged in", "Downloaded documents"],
+      "adminComments": ["Needs review, frequent downloads"]
+    }
+  ]
+  

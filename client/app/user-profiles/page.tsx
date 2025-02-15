@@ -7,7 +7,7 @@ import { UserBehaviorAnalytics } from "@/components/user-behavior-analytics"
 export default function UserProfilesPage() {
   return (
 
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 ">
       <h2 className="text-3xl font-bold text-center mb-8">User Profiles</h2>
       <UserProfilesOverview />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-fr mt-5">
@@ -19,12 +19,12 @@ export default function UserProfilesPage() {
 
 
         </div> */}
-        <div className="flex">
+        {/* <div className="flex">
           <UserBehaviorAnalytics />
         </div>
         <div className="flex">
           <UserActivity />
-        </div>
+        </div> */}
       </div>
     </div>
 
