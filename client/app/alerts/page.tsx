@@ -4,6 +4,8 @@ import { AnomalyDetection } from "@/components/anomaly-detection"
 import { AlertTrends } from "@/components/alert-trends"
 import { RiskScoreDistribution } from "@/components/risk-score-distribution"
 
+import AlertsList from "@/components/AlertsList";
+
 
 export default function AlertsPage() {
   return (
@@ -13,7 +15,7 @@ export default function AlertsPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr mb-4">
         <div className="flex">
           <AlertTrends />
-    
+
         </div>
         <div className="flex">
           <AnomalyDetection />
@@ -30,6 +32,11 @@ export default function AlertsPage() {
 
 
       </div>
+      <div>
+
+      </div>
+      <AlertsList/>
+
     </div>
   )
 }

@@ -59,7 +59,8 @@ def extract_packet_info(packet):
     return packet_info
 
 # Load the trained model pipeline (ensure the file exists in your working directory).
-with open("F:\\HackIIT\\theproject\\insider\\server\\models\\xgboost_modelanuj1.pkl", "rb") as f:
+with open("E:\\projects\\insider\\server\\models\\xgboost_modelanuj1.pkl", "rb") as f:
+
     model_pipeline = pickle.load(f)
 
 # The candidate features expected by the model.

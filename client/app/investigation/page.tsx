@@ -38,7 +38,7 @@ const logs: LogEntry[] = [
   },
   { 
     id: 2, 
-    user: "Liz Annie",
+    user: "Meljo Saji",
     department: "HR",
     action: "Login",
     resource: "Main Dashboard",
